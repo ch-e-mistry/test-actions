@@ -8,6 +8,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello DevOps Training!\n');
 });
+module.exports = server; // Exportáld a szervert, hogy a tesztek elérhessék
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
